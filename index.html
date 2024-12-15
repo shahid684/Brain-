@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Quiz Game</h1>
+        <div id="category-selection">
+            <label for="category">Choose Category:</label>
+            <select id="category">
+                <option value="9">General Knowledge</option>
+                <option value="21">Sports</option>
+                <option value="23">History</option>
+                <option value="17">Science</option>
+                <option value="25">Art</option>
+                <option value="12">Music</option>
+                <option value="11">Film</option>
+                <option value="22">Geography</option>
+                <option value="18">Computers</option>
+            </select>
+        </div>
+        <div id="difficulty-selection">
+            <label for="difficulty">Choose Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <div id="question"></div>
+        <div id="options">
+            <button id="option0" class="btn" onclick="selectAnswer(0)">Option 1</button>
+            <button id="option1" class="btn" onclick="selectAnswer(1)">Option 2</button>
+            <button id="option2" class="btn" onclick="selectAnswer(2)">Option 3</button>
+            <button id="option3" class="btn" onclick="selectAnswer(3)">Option 4</button>
+        </div>
+        <div id="score">Score: 0</div>
+        <div id="timer">Time Left: 15</div>
+        <button id="startButton" onclick="startGame()">Start Game</button>
+        <button id="pauseButton" onclick="pauseGame()">Pause</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
